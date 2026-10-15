@@ -1,0 +1,1 @@
+export default function PageHeader({eyebrow,title,description,action,meta}){return <div className="page-header"><div><div className="eyebrow-row">{eyebrow&&<span className="eyebrow">{eyebrow}</span>}{meta}</div><h1>{title}</h1>{description&&<p>{description}</p>}</div>{action&&<div className="header-action">{action}</div>}</div>}

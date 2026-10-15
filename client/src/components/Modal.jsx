@@ -1,0 +1,2 @@
+import Icon from './Icon.jsx'
+export default function Modal({title,subtitle,children,onClose,wide=false}){return <div className="modal-backdrop" onMouseDown={e=>e.currentTarget===e.target&&onClose()}><div className={`modal ${wide?'wide':''}`} role="dialog" aria-modal="true"><header className="modal-head"><div><b>{title}</b>{subtitle&&<span>{subtitle}</span>}</div><button className="icon-btn" onClick={onClose} aria-label="Close"><Icon name="close" size={18}/></button></header><div className="modal-body">{children}</div></div></div>}

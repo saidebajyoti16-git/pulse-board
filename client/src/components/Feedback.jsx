@@ -1,0 +1,3 @@
+export function Loading({label='Loading…'}){ return <div className="state-card"><div className="spinner"/><b>{label}</b><span>Fetching the latest Pulse Board data.</span></div> }
+export function ErrorState({message,retry}){ return <div className="state-card error-state"><div className="state-icon">!</div><b>Could not load this page</b><span>{message}</span>{retry&&<button className="secondary-btn" onClick={retry}>Try again</button>}</div> }
+export function EmptyState({title,message,action}){ return <div className="state-card"><div className="state-icon">•</div><b>{title}</b><span>{message}</span>{action}</div> }
